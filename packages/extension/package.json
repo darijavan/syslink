@@ -1,0 +1,39 @@
+{
+  "name": "syslink-extension",
+  "displayName": "SysLink",
+  "description": "AI agent bridge — spawns a local daemon for OS-level automation (mouse, keyboard, app control).",
+  "version": "0.1.0",
+  "publisher": "syslink",
+  "private": true,
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": ["Other"],
+  "activationEvents": [],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "aiAgent.startDaemon",
+        "title": "SysLink: Start Daemon"
+      },
+      {
+        "command": "aiAgent.sendTestCommand",
+        "title": "SysLink: Send Test Command (Ping)"
+      }
+    ]
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "vscode:prepublish": "pnpm build"
+  },
+  "dependencies": {
+    "@syslink/shared": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.90.0",
+    "tsup": "^8.3.0",
+    "typescript": "^5.4.5"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "syslink",
+  "private": true,
+  "version": "0.1.0",
+  "description": "VS Code extension and local daemon for AI-driven OS-level automation",
+  "scripts": {
+    "build": "pnpm -r build",
+    "dev": "pnpm -r --parallel dev",
+    "start:extension": "code --extensionDevelopmentPath=packages/extension"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["esbuild"]
+  }
+}
