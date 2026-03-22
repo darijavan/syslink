@@ -6,10 +6,16 @@
   "scripts": {
     "build": "pnpm -r build",
     "dev": "pnpm -r --parallel dev",
-    "start:extension": "code --extensionDevelopmentPath=packages/extension"
+    "start:extension": "code --extensionDevelopmentPath=packages/extension",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "devDependencies": {
     "@types/node": "^25.5.0",
+    "@typescript-eslint/eslint-plugin": "^8.57.1",
+    "@typescript-eslint/parser": "^8.57.1",
+    "eslint": "^9.39.4",
+    "eslint-config-prettier": "^10.1.8",
     "typescript": "^5.9.3"
   },
   "pnpm": {
